@@ -41,7 +41,7 @@ body{
       font-weight: bold;
       letter-spacing: 1px;
       transition: 0.2s;
-      margin: 5px;
+      margin: 5px 0;
       &:hover{
         transition: 0.2s;
         color: #ffffff;
@@ -54,6 +54,7 @@ body{
 @media (max-width: 900px){
   .wrapper{
     width: 100%;
-    min-width: 420px;
+    min-width: 360px;
+    padding: 40px 0px 20px 0px;
   }
 }

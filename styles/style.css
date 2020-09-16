@@ -100,7 +100,7 @@ body {
   letter-spacing: 1px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  margin: 5px;
+  margin: 5px 0;
 }
 
 .wrapper main a:hover {
@@ -115,7 +115,8 @@ body {
 @media (max-width: 900px) {
   .wrapper {
     width: 100%;
-    min-width: 420px;
+    min-width: 360px;
+    padding: 40px 0px 20px 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
