@@ -53,7 +53,7 @@ table {
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   background: #6395ff;
   background-image: url(/img/backg.svg);
   background-repeat: no-repeat;
@@ -62,7 +62,7 @@ body {
 }
 
 .wrapper {
-  width: 900px;
+  max-width: 1000px;
   letter-spacing: 1px;
   padding: 40px 20px 20px 20px;
   -webkit-box-sizing: border-box;
@@ -70,6 +70,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .wrapper h1 {
@@ -85,38 +86,97 @@ body {
 
 .wrapper main {
   padding-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.wrapper main .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 500px;
+  height: 300px;
+  background-color: #1a217a;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+}
+
+.wrapper main .card:hover a {
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #63ffa9;
+}
+
+.wrapper main .card:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #222a92;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper main .card svg {
+  fill: #2d4588;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper main .card:hover svg {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  fill: #63ffa9;
 }
 
 .wrapper main a {
-  width: 80%;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.9);
-  color: #6960eb;
-  border-radius: 50px;
-  padding: 15px;
-  font-size: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-top: 250px;
+  color: rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+  font-size: 16px;
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 1px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   margin: 5px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .wrapper main a:hover {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  color: #ffffff;
-  background: #5868f3;
-  -webkit-box-shadow: 0px 0px 8px 0px rgba(28, 47, 214, 0.5);
-          box-shadow: 0px 0px 8px 0px rgba(28, 47, 214, 0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 210px;
 }
 
-@media (max-width: 900px) {
-  .wrapper {
-    width: 100%;
-    min-width: 360px;
-    padding: 40px 0px 20px 0px;
+@media (max-width: 700px) {
+  main {
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 /*# sourceMappingURL=style.css.map */
