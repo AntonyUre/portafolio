@@ -3,7 +3,7 @@
 body {
   height: 100%;
   background: #6395ff;
-  background-image: url(/img/backg.svg);
+  // background-image: url(/img/backg.svg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100%;
@@ -27,7 +27,7 @@ body {
     font-size: 15px;
     color: #fff;
   }
-  main {
+  .container-card {
     padding-top: 30px;
     display: grid;
     // grid-template-columns: repeat(3, 1fr);

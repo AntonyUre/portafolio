@@ -55,7 +55,6 @@ table {
 body {
   height: 100%;
   background: #6395ff;
-  background-image: url(/img/backg.svg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100%;
@@ -84,7 +83,7 @@ body {
   color: #fff;
 }
 
-.wrapper main {
+.wrapper .container-card {
   padding-top: 30px;
   display: -ms-grid;
   display: grid;
@@ -95,7 +94,7 @@ body {
   transition: 0.3s;
 }
 
-.wrapper main .card {
+.wrapper .container-card .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,14 +119,14 @@ body {
   position: relative;
 }
 
-.wrapper main .card:hover a {
+.wrapper .container-card .card:hover a {
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   color: #63ffa9;
 }
 
-.wrapper main .card:hover {
+.wrapper .container-card .card:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform: scale(1.05);
@@ -137,19 +136,19 @@ body {
           box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
-.wrapper main .card svg {
+.wrapper .container-card .card svg {
   fill: #2d4588;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.wrapper main .card:hover svg {
+.wrapper .container-card .card:hover svg {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   fill: #63ffa9;
 }
 
-.wrapper main a {
+.wrapper .container-card a {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -167,7 +166,7 @@ body {
           box-sizing: border-box;
 }
 
-.wrapper main a:hover {
+.wrapper .container-card a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 210px;
